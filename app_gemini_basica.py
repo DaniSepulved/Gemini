@@ -3,15 +3,13 @@ import google.generativeai as genai
 import pandas as pd
 from datetime import datetime, timedelta
 
-# Configura tu clave API de Gemini
-genai.configure(api_key="AIzaSyAcKoa5G10uwHLc1zR-IUkTomOOAdg3_kE")  # ⬆ Reemplaza con tu clave real
+genai.configure(api_key="AIzaSyAcKoa5G10uwHLc1zR-IUkTomOOAdg3_kE")
 
-# Configuración de la página
 st.set_page_config(page_title="📅 Asistente Personal con Agenda", layout="centered")
 st.title("🧠 Tu Asistente con Gemini")
 st.markdown("Puedes escribir cualquier cosa: preguntas generales, pedir consejos o que te organice tu semana.")
 
-# Entrada del usuario
+#Entrada del usuario
 modo = st.selectbox("Selecciona el modo de asistencia:", ["Chat General", "Organizar mi semana"])
 entrada = st.text_area("💭 Escribe tu mensaje o actividades:", height=200)
 generar = st.button("Generar Respuesta")
